@@ -69,3 +69,8 @@ Las pruebas verifican:
 
 ## Autores ✒️
 Maria Fernanda Palencia Cáceres
+
+## Excel
+
+[SQA_Formato Matriz de priorización de casos de prueba_AAAAMMDD (1)(Recuperado automáticamente).xlsx](https://github.com/user-attachments/files/23596087/SQA_Formato.Matriz.de.priorizacion.de.casos.de.prueba_AAAAMMDD.1.Recuperado.automaticamente.xlsx)
+
