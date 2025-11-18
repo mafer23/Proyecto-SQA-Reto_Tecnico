@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Datepicker - Selección de fecha y validaciones","Fechas fuera de rango no seleccionables y persistencia al enviar","ERROR","2025-11-17T18:34:20.3146957-05:00[America/Bogota]","0.0","36.34"
+"Datepicker - Selección de fecha simple","Selección de una fecha y validación de formato","SUCCESS","2025-11-17T18:45:05.9661884-05:00[America/Bogota]","0.0","28.59"
+"Datepicker - Selección de fecha y validaciones","Selección de una fecha específica en un mes diferente al actual","SUCCESS","2025-11-17T18:48:01.58055-05:00[America/Bogota]","0.0","26.71"

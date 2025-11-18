@@ -1,0 +1,403 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html class="js" lang="en-US"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; <br/>
+  &lt;title&gt;Datepicker | jQuery UI&lt;/title&gt; <br/>
+  &lt;meta name="author" content="OpenJS Foundation - openjsf.org"&gt; <br/>
+  &lt;meta name="description" content="jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice."&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width"&gt; <br/>
+  &lt;link rel="shortcut icon" href="https://jqueryui.com/wp-content/themes/jqueryui.com/i/favicon.ico"&gt; <br/>
+  &lt;link rel="stylesheet" href="https://jqueryui.com/wp-content/themes/jquery/lib/typesense-minibar/typesense-minibar.css?v=c5fa9b9a"&gt; <br/>
+  &lt;link rel="stylesheet" href="https://jqueryui.com/wp-content/themes/jquery/css/base.css?v=5499e3ad"&gt; <br/>
+  &lt;link rel="stylesheet" href="https://jqueryui.com/wp-content/themes/jqueryui.com/style.css?v=7c7f86f2"&gt; <br/>
+  &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="https://jqueryui.com/wp-content/themes/jquery/js/main.js?v=10baaffd"&gt;&lt;/script&gt; <br/>
+  &lt;script defer type="module" src="https://jqueryui.com/wp-content/themes/jquery/lib/typesense-minibar/typesense-minibar.js?v=830f1ee1"&gt;&lt;/script&gt; <br/>
+  &lt;meta name="robots" content="max-image-preview:large"&gt; <br/>
+  &lt;link rel="https://api.w.org/" href="https://jqueryui.com/wp-json/"&gt;<br/>
+  &lt;link rel="alternate" title="JSON" type="application/json" href="https://jqueryui.com/wp-json/wp/v2/pages/24"&gt;<br/>
+  &lt;meta name="generator" content="WordPress 6.8.3"&gt; <br/>
+  &lt;link rel="canonical" href="https://jqueryui.com/datepicker/"&gt; <br/>
+  &lt;link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://jqueryui.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjqueryui.com%2Fdatepicker%2F"&gt; <br/>
+  &lt;link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://jqueryui.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjqueryui.com%2Fdatepicker%2F&amp;format=xml"&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body class="jquery-ui wp-singular page-template-default page page-id-24 wp-theme-jquery wp-child-theme-jqueryuicom page-slug-datepicker single-author singular"&gt; <br/>
+  &lt;header&gt; <br/>
+   &lt;section id="global-nav"&gt; <br/>
+    &lt;nav&gt; <br/>
+     &lt;div class="constrain"&gt; <br/>
+      &lt;ul class="projects"&gt; <br/>
+       &lt;li class="project jquery"&gt;&lt;a href="https://jquery.com/" title="jQuery"&gt;jQuery&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li class="project jquery-ui"&gt;&lt;a href="https://jqueryui.com/" title="jQuery UI"&gt;jQuery UI&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li class="project jquery-mobile"&gt;&lt;a href="https://jquerymobile.com/" title="jQuery Mobile"&gt;jQuery Mobile&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li class="project sizzlejs"&gt;&lt;a href="https://sizzlejs.com/" title="Sizzle"&gt;Sizzle&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li class="project qunitjs"&gt;&lt;a href="https://qunitjs.com/" title="QUnit"&gt;QUnit&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+      &lt;ul class="links"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://plugins.jquery.com/"&gt;Plugins&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li class="dropdown"&gt;&lt;a href="https://contribute.jquery.org/"&gt;Contribute&lt;/a&gt; <br/>
+        &lt;ul&gt; <br/>
+         &lt;li&gt;&lt;a href="https://cla.openjsf.org/"&gt;CLA&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://contribute.jquery.org/style-guide/"&gt;Style Guides&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://contribute.jquery.org/triage/"&gt;Bug Triage&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://contribute.jquery.org/code/"&gt;Code&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://contribute.jquery.org/documentation/"&gt;Documentation&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://contribute.jquery.org/web-sites/"&gt;Web Sites&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+       &lt;li class="dropdown"&gt;&lt;a href="https://events.jquery.org/"&gt;Events&lt;/a&gt; <br/>
+        &lt;ul class="wide"&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+       &lt;li class="dropdown"&gt;&lt;a href="https://jquery.com/support/"&gt;Support&lt;/a&gt; <br/>
+        &lt;ul&gt; <br/>
+         &lt;li&gt;&lt;a href="https://learn.jquery.com/"&gt;Learning Center&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://jquery.com/support/"&gt;Chat&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://stackoverflow.com/tags/jquery/info"&gt;Stack Overflow&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://contribute.jquery.org/bug-reports/"&gt;Report a bug&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+       &lt;li class="dropdown"&gt;&lt;a href="https://openjsf.org/"&gt;OpenJS Foundation&lt;/a&gt; <br/>
+        &lt;ul&gt; <br/>
+         &lt;li&gt;&lt;a href="https://openjsf.org/join"&gt;Join&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://openjsf.org/members"&gt;Members&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://jquery.com/team"&gt;jQuery Team&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://openjsf.org/governance"&gt;Governance&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://code-of-conduct.openjsf.org/"&gt;Conduct&lt;/a&gt;&lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://openjsf.org/projects"&gt;Projects&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/nav&gt; <br/>
+   &lt;/section&gt; <br/>
+  &lt;/header&gt; <br/>
+  &lt;div id="container"&gt; <br/>
+   &lt;div id="logo-events" class="constrain clearfix"&gt; <br/>
+    &lt;h2 class="logo"&gt;&lt;a href="/" title="jQuery UI"&gt;jQuery UI&lt;/a&gt;&lt;/h2&gt; <br/>
+    &lt;aside id="broadcast"&gt;&lt;/aside&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;nav id="main" class="constrain clearfix"&gt; <br/>
+    &lt;div class="menu-top-container"&gt; &lt;button hidden id="menu-trigger" class="button menu-trigger" aria-expanded="false" aria-haspopup="menu"&gt;Navigation&lt;/button&gt; <br/>
+     &lt;ul id="menu-top" class="menu" role="menu" aria-labelledby="menu-trigger"&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://jqueryui.com/demos/"&gt;Demos&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://jqueryui.com/download/"&gt;Download&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://api.jqueryui.com/"&gt;API Documentation&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://jqueryui.com/themeroller/"&gt;Themes&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://jqueryui.com/development/"&gt;Development&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://jqueryui.com/support/"&gt;Support&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://blog.jqueryui.com/"&gt;Blog&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li class="menu-item"&gt;&lt;a href="https://jqueryui.com/about/"&gt;About&lt;/a&gt;&lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+    &lt;/div&gt; &lt;typesense-minibar data-origin="https://typesense.jquery.com" data-collection="jqueryui_com" data-key="Zh8mMgohXECel9wjPwqT7lekLSG3OCgz" data-foot="true" data-group="true"&gt; <br/>
+     &lt;form role="search" class="searchform tsmb-form--slash" action="https://jqueryui.com/" method="get"&gt; <br/>
+      &lt;input type="search" name="s" aria-label="Search jQuery UI" value="" placeholder="Search" autocomplete="off"&gt;<br/>
+      &lt;div role="listbox" hidden&gt;&lt;/div&gt; &lt;button type="submit" class="visuallyhidden"&gt;&lt;/button&gt; <br/>
+      &lt;svg viewbox="0 0 12 12" width="20" height="20" aria-hidden="true" tabindex="-1" class="tsmb-icon-close"&gt;<br/>
+       &lt;path d="M9 3L3 9M3 3L9 9"&gt;&lt;/path&gt;<br/>
+      &lt;/svg&gt;<br/>
+     &lt;/form&gt; <br/>
+    &lt;/typesense-minibar&gt; <br/>
+   &lt;/nav&gt; <br/>
+   &lt;div id="content-wrapper" class="clearfix row"&gt; <br/>
+    &lt;div class="content-right twelve columns"&gt; <br/>
+     &lt;div id="content"&gt; <br/>
+      &lt;h1 class="entry-title"&gt;Datepicker&lt;/h1&gt; <br/>
+      &lt;hr&gt; <br/>
+      &lt;p class="desc"&gt;Select a date from a popup or inline calendar&lt;/p&gt; <br/>
+      &lt;div class="demo-list"&gt;<br/>
+       &lt;h2&gt;Examples&lt;/h2&gt;<br/>
+       &lt;ul&gt;<br/>
+        &lt;li class="active"&gt;&lt;a href="/resources/demos/datepicker/default.html"&gt;Default functionality&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/animation.html"&gt;Animations&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/other-months.html"&gt;Dates in other months&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/buttonbar.html"&gt;Display button bar&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/inline.html"&gt;Display inline&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/dropdown-month-year.html"&gt;Display month &amp; year menus&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/multiple-calendars.html"&gt;Display multiple months&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/date-formats.html"&gt;Format date&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/icon-trigger.html"&gt;Icon trigger&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/localization.html"&gt;Localize calendar&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/alt-field.html"&gt;Populate alternate field&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/min-max.html"&gt;Restrict date range&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/date-range.html"&gt;Select a Date Range&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="/resources/demos/datepicker/show-week.html"&gt;Show week of the year&lt;/a&gt;&lt;/li&gt;<br/>
+       &lt;/ul&gt;<br/>
+      &lt;/div&gt;&lt;iframe src="/resources/demos/datepicker/default.html" class="demo-frame" cd_frame_id_="06044232f3a1ba075f9325701d49309f"&gt;&lt;/iframe&gt;<br/>
+      &lt;div class="demo-description"&gt; <br/>
+       &lt;p&gt;The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay. Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input's value.&lt;/p&gt; <br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="view-source"&gt;<br/>
+       &lt;a tabindex="0"&gt;&lt;i class="icon-eye-open"&gt;&lt;/i&gt; view source&lt;/a&gt;<br/>
+       &lt;div&gt;<br/>
+        &lt;div class="syntaxhighlighter xml"&gt; <br/>
+         &lt;table&gt; <br/>
+          &lt;tbody&gt; <br/>
+           &lt;tr&gt; <br/>
+            &lt;td class="gutter"&gt; <br/>
+             &lt;div class="line n1"&gt;<br/>
+              1<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n2"&gt;<br/>
+              2<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n3"&gt;<br/>
+              3<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n4"&gt;<br/>
+              4<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n5"&gt;<br/>
+              5<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n6"&gt;<br/>
+              6<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n7"&gt;<br/>
+              7<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n8"&gt;<br/>
+              8<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n9"&gt;<br/>
+              9<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n10"&gt;<br/>
+              10<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n11"&gt;<br/>
+              11<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n12"&gt;<br/>
+              12<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n13"&gt;<br/>
+              13<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n14"&gt;<br/>
+              14<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n15"&gt;<br/>
+              15<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n16"&gt;<br/>
+              16<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n17"&gt;<br/>
+              17<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n18"&gt;<br/>
+              18<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n19"&gt;<br/>
+              19<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n20"&gt;<br/>
+              20<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n21"&gt;<br/>
+              21<br/>
+             &lt;/div&gt; <br/>
+             &lt;div class="line n22"&gt;<br/>
+              22<br/>
+             &lt;/div&gt; &lt;/td&gt; <br/>
+            &lt;td class="code"&gt; &lt;pre&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;&lt;span class="hljs-meta"&gt;&lt;!DOCTYPE &lt;span class="hljs-meta-keyword"&gt;html&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;html&lt;/span&gt; &lt;span class="hljs-attr"&gt;lang&lt;/span&gt;=&lt;span class="hljs-string"&gt;"en"&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;head&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;meta&lt;/span&gt; &lt;span class="hljs-attr"&gt;charset&lt;/span&gt;=&lt;span class="hljs-string"&gt;"utf-8"&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;meta&lt;/span&gt; &lt;span class="hljs-attr"&gt;name&lt;/span&gt;=&lt;span class="hljs-string"&gt;"viewport"&lt;/span&gt; &lt;span class="hljs-attr"&gt;content&lt;/span&gt;=&lt;span class="hljs-string"&gt;"width=device-width, initial-scale=1"&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;title&lt;/span&gt;&gt;&lt;/span&gt;jQuery UI Datepicker - Default functionality&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;title&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;link&lt;/span&gt; &lt;span class="hljs-attr"&gt;rel&lt;/span&gt;=&lt;span class="hljs-string"&gt;"stylesheet"&lt;/span&gt; &lt;span class="hljs-attr"&gt;href&lt;/span&gt;=&lt;span class="hljs-string"&gt;"https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;link&lt;/span&gt; &lt;span class="hljs-attr"&gt;rel&lt;/span&gt;=&lt;span class="hljs-string"&gt;"stylesheet"&lt;/span&gt; &lt;span class="hljs-attr"&gt;href&lt;/span&gt;=&lt;span class="hljs-string"&gt;"/resources/demos/style.css"&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;script&lt;/span&gt; &lt;span class="hljs-attr"&gt;src&lt;/span&gt;=&lt;span class="hljs-string"&gt;"https://code.jquery.com/jquery-3.7.1.js"&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;script&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;script&lt;/span&gt; &lt;span class="hljs-attr"&gt;src&lt;/span&gt;=&lt;span class="hljs-string"&gt;"https://code.jquery.com/ui/1.14.1/jquery-ui.js"&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;script&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;script&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="javascript"&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  $( &lt;span class="hljs-function"&gt;&lt;span class="hljs-keyword"&gt;function&lt;/span&gt;(&lt;span class="hljs-params"&gt;&lt;/span&gt;) &lt;/span&gt;{&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;    $( &lt;span class="hljs-string"&gt;"#datepicker"&lt;/span&gt; ).datepicker();&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  } );&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;  &lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;script&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;head&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;&lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;body&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt; &lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;&lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;p&lt;/span&gt;&gt;&lt;/span&gt;Date: &lt;span class="hljs-tag"&gt;&lt;&lt;span class="hljs-name"&gt;input&lt;/span&gt; &lt;span class="hljs-attr"&gt;type&lt;/span&gt;=&lt;span class="hljs-string"&gt;"text"&lt;/span&gt; &lt;span class="hljs-attr"&gt;id&lt;/span&gt;=&lt;span class="hljs-string"&gt;"datepicker"&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;p&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt; &lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt; &lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt; &lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt; &lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="container"&gt;<br/>
+               &lt;div class="line"&gt;<br/>
+                &lt;code&gt;&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;body&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class="hljs-tag"&gt;&lt;/&lt;span class="hljs-name"&gt;html&lt;/span&gt;&gt;&lt;/span&gt;&lt;/code&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;&lt;/pre&gt; &lt;/td&gt; <br/>
+           &lt;/tr&gt; <br/>
+          &lt;/tbody&gt; <br/>
+         &lt;/table&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt; <br/>
+      &lt;p&gt;Want to learn more about the datepicker widget? Check out the &lt;a href="https://api.jqueryui.com/datepicker/"&gt;API documentation&lt;/a&gt;.&lt;/p&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div id="sidebar" class="widget-area" role="complementary"&gt; <br/>
+      &lt;aside class="widget"&gt; <br/>
+       &lt;h3 class="widget-title"&gt;Interactions&lt;/h3&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/draggable/"&gt;Draggable&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/droppable/"&gt;Droppable&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/resizable/"&gt;Resizable&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/selectable/"&gt;Selectable&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/sortable/"&gt;Sortable&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; <br/>
+      &lt;/aside&gt; <br/>
+      &lt;aside class="widget"&gt; <br/>
+       &lt;h3 class="widget-title"&gt;Widgets&lt;/h3&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/accordion/"&gt;Accordion&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/autocomplete/"&gt;Autocomplete&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/button/"&gt;Button&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/checkboxradio/"&gt;Checkboxradio&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/controlgroup/"&gt;Controlgroup&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/datepicker/"&gt;Datepicker&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/dialog/"&gt;Dialog&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/menu/"&gt;Menu&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/progressbar/"&gt;Progressbar&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/selectmenu/"&gt;Selectmenu&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/slider/"&gt;Slider&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/spinner/"&gt;Spinner&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/tabs/"&gt;Tabs&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/tooltip/"&gt;Tooltip&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; <br/>
+      &lt;/aside&gt; <br/>
+      &lt;aside class="widget"&gt; <br/>
+       &lt;h3 class="widget-title"&gt;Effects&lt;/h3&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/addClass/"&gt;Add Class&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/animate/"&gt;Color Animation&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/easing/"&gt;Easing&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/effect/"&gt;Effect&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/hide/"&gt;Hide&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/removeClass/"&gt;Remove Class&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/show/"&gt;Show&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/switchClass/"&gt;Switch Class&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/toggle/"&gt;Toggle&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/toggleClass/"&gt;Toggle Class&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; <br/>
+      &lt;/aside&gt; <br/>
+      &lt;aside class="widget"&gt; <br/>
+       &lt;h3 class="widget-title"&gt;Utilities&lt;/h3&gt; <br/>
+       &lt;ul&gt; <br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/position/"&gt;Position&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;li&gt;&lt;a href="https://jqueryui.com/widget/"&gt;Widget Factory&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; <br/>
+      &lt;/aside&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;footer class="clearfix simple"&gt; <br/>
+   &lt;div class="constrain"&gt; <br/>
+    &lt;div class="row"&gt; <br/>
+     &lt;div class="six columns centered"&gt; <br/>
+      &lt;h3&gt;&lt;span&gt;Books&lt;/span&gt;&lt;/h3&gt; <br/>
+      &lt;ul class="books"&gt; <br/>
+       &lt;li&gt; &lt;a href="https://www.manning.com/books/jquery-ui-in-action"&gt; &lt;span&gt;&lt;img src="https://jqueryui.com/wp-content/themes/jquery/content/books/jquery-ui-in-action.jpg" alt="jQuery UI in Action by TJ VanToll" width="92" height="114"&gt;&lt;/span&gt; &lt;strong&gt;jQuery UI in Action&lt;/strong&gt;&lt;br&gt; &lt;cite&gt;TJ VanToll&lt;/cite&gt; &lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt; &lt;a href="https://www.packtpub.com/web-development/jquery-ui-themes-beginners-guide"&gt; &lt;img src="https://jqueryui.com/wp-content/themes/jquery/content/books/jquery-ui-themes.jpg" alt="jQuery UI Themes by Adam Boduch" width="92" height="114"&gt; &lt;span class="book-title"&gt;jQuery UI Themes&lt;/span&gt; &lt;cite&gt;Adam Boduch&lt;/cite&gt; &lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt; &lt;a href="https://www.packtpub.com/web-development/jquery-ui-cookbook"&gt; &lt;img src="https://jqueryui.com/wp-content/themes/jquery/content/books/jquery-ui-cookbook.jpg" alt="jQuery UI Cookbook by Adam Boduch" width="92" height="114"&gt; &lt;span class="book-title"&gt;jQuery UI Cookbook&lt;/span&gt; &lt;cite&gt;Adam Boduch&lt;/cite&gt; &lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;div id="legal" class="legal"&gt; <br/>
+     &lt;ul class="footer-site-links"&gt; <br/>
+      &lt;li&gt;&lt;a class="icon-pencil" href="https://learn.jquery.com/"&gt;Learning Center&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a class="icon-comments" href="https://jquery.com/support/"&gt;Chat&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a class="icon-twitter" href="https://twitter.com/jqueryui"&gt;Twitter&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a class="icon-github" href="https://github.com/jquery"&gt;GitHub&lt;/a&gt;&lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+     &lt;p class="copyright"&gt; Copyright 2025 &lt;a href="https://openjsf.org/"&gt;OpenJS Foundation&lt;/a&gt; and jQuery contributors. All rights reserved. See &lt;a href="https://jquery.com/license/"&gt;jQuery License&lt;/a&gt; for more information. The &lt;a href="https://openjsf.org/"&gt;OpenJS Foundation&lt;/a&gt; has registered trademarks and uses trademarks. For a list of trademarks of the &lt;a href="https://openjsf.org/"&gt;OpenJS Foundation&lt;/a&gt;, please see our &lt;a href="https://trademark-policy.openjsf.org/"&gt;Trademark Policy&lt;/a&gt; and &lt;a href="https://trademark-list.openjsf.org/"&gt;Trademark List&lt;/a&gt;. Trademarks and logos not indicated on the &lt;a href="https://trademark-list.openjsf.org/"&gt;list of OpenJS Foundation trademarks&lt;/a&gt; are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them. OpenJS Foundation &lt;a href="https://terms-of-use.openjsf.org/"&gt;Terms of Use&lt;/a&gt;, &lt;a href="https://privacy-policy.openjsf.org/"&gt;Privacy&lt;/a&gt;, and &lt;a href="https://www.linuxfoundation.org/cookies"&gt;Cookie&lt;/a&gt; Policies also apply. &lt;/p&gt; <br/>
+     &lt;p&gt;&lt;a href="https://www.digitalocean.com" class="do-link"&gt;Web hosting by Digital Ocean&lt;/a&gt; | &lt;a href="https://www.fastly.com/"&gt;CDN by Fastly&lt;/a&gt; | &lt;a href="https://wordpress.org/" class="wp-link"&gt;Powered by WordPress&lt;/a&gt;&lt;/p&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/footer&gt; <br/>
+  &lt;script type="speculationrules"&gt;<br/>
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jqueryui.com\/*","\/wp-content\/themes\/jquery\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}<br/>
+&lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
